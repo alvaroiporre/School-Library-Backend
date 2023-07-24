@@ -6,7 +6,7 @@
   <br/>
   <br/>
   <br/>
-  <h1><b>PROJECT NAME</b></h1><a name="about-project"></a>
+  <h1><b>School Library</b></h1><a name="about-project"></a>
 </div>
 
 <!--
@@ -57,7 +57,7 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 Project Name <a name="about-project"></a>
 
-> The **ProjectName** something about the project.
+> The **School Library** is a project to record the rental of a school library built in Ruby.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -90,10 +90,10 @@ After you're finished please remove all the comments and instructions!
 
 ### Key Features <a name="key-features"></a>
 
-<!-- - Create My own Enumerable.
-- Use of Ruby's best practices.
-- Use of Gitflow.
-- Use of linters. -->
+
+- OOP.
+- Inheritance.
+- Use of linters.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -124,8 +124,8 @@ In order to run this project you need:
 Clone this repository to your desired folder:
 
 ```sh
-  cd my-folder
-  git clone https://github.com/......
+  cd School-Library-Backend
+  git clone git@github.com:alvaroiporre/School-Library-Backend.git
 ```
 
 ### Install
@@ -141,7 +141,7 @@ Install this project with:
 To run the project, run the following command:
 
 ```sh
-  ruby file.rb
+  ruby main.rb
 ```
 
 ### Run tests
@@ -176,11 +176,7 @@ Example:
 - Twitter: [@alvaro.iporre](https://twitter.com/Alvaro41065582)
 - LinkedIn: [Álvaro Iporre](https://www.linkedin.com/in/alvaroiporre/)
 
-<!-- 👤 **Therese Tuyisabe**
 
-- GitHub: [@theresetuyi](https://github.com/theresetuyi)
-- Twitter: [@THERESETUYISAB2](https://twitter.com/THERESETUYISAB2)
-- LinkedIn: [therese-tuyisabe](https://www.linkedin.com/in/therese-tuyisabe/) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -188,9 +184,9 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- **More data**
-- **More classes**
-- **More supported languages**
+- **More Classes**
+- **Terminal UI**
+- **Design Patterns**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
