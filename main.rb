@@ -41,8 +41,7 @@ puts "Teacher Age: #{teacher.age}"
 # can_use_services? override method
 puts "Teacher can_use_services? #{teacher.can_use_services?}"
 
-
-#Test Decorators
+# Test Decorators
 person = Person.new(22, name: 'maximilianus')
 person.correct_name
 capitalized_person = CapitalizeDecorator.new(person)
