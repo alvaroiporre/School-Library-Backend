@@ -102,7 +102,6 @@ class App
       list_rentals_for_person(person_id)
     when 7
       puts 'Thank you for using this app!'
-      break
     else
       puts 'Invalid option. Please try again.'
     end
