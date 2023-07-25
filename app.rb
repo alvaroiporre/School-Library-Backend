@@ -1,12 +1,13 @@
 require_relative 'person'
 require_relative 'book'
 require_relative 'rental'
+require_relative 'student'
+require_relative 'teacher'
 
 class App
   def initialize
     @people = []
     @books = []
-    @rentals = []
   end
 
   def list_books
@@ -28,8 +29,8 @@ class App
 
     elsif role.downcase == "1"
       puts "Has parent permission? [Y/N]:"
-      permission = role = gets.chomp
-      @people << Student.new(age, name: name, parent_permission: permission.capitalize() == "S")
+      permission = gets.chomp
+      @people << Student.new(age, name: name, parent_permission: permission.upcase == "Y")
       puts "Person created successfully"
     else
       puts "Invalid role. Only 'teacher' or 'student' allowed."
@@ -44,7 +45,6 @@ class App
   def create_rental(index_book, index_person, rental_date)
     if index_person < @people.length && index_book < @books.length
       @people[index_person].add_rental(@books[index_book], rental_date)
-      @rentals << rental
       puts "Rental created succesfully"
     else
       puts "Person or book not found. Rental creation failed."
@@ -56,8 +56,7 @@ class App
 
     if person
       puts "Rentals for #{person.name}:"
-      rentals = @rentals.select { |rental| rental.person == person }
-      rentals.each { |rental| puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}" }
+      person.rentals.each {|rental| puts "Date: #{rental.date}, Book: #{rental.book.title} by #{rental.book.author}"}
     else
       puts "Person not found."
     end
@@ -98,10 +97,10 @@ class App
         create_book(title, author)
       when 5
         puts "Select a book from the following list by number"
-        @books.each { |book, idx| puts "#{idx}) Title: #{book.title}, Author: #{book.author}" }
+        @books.each_with_index { |book, idx| puts "#{idx}) Title: #{book.title}, Author: #{book.author}" }
         index_book = gets.chomp.to_i
         puts "Select a person from the following list by number (not id)"
-        @people.each { |person, idx| puts "#{idx})[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
+        @people.each_with_index { |person, idx| puts "#{idx})[#{person.class.name}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}" }
         index_person = gets.chomp.to_i
 
         puts "Date [YYYY-MM-DD]:"
