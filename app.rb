@@ -63,7 +63,7 @@ class App
     end
   end
 
-  def main
+  def run
     loop do
       puts "Wlcome to Schoo Library App!\n"
       puts "\nPlease choose an option by entering a number:"

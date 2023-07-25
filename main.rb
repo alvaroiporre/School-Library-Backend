@@ -1,3 +1,4 @@
+=begin
 require_relative 'person'
 require_relative 'student'
 require_relative 'teacher'
@@ -91,3 +92,12 @@ person1.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
 # Accessing rentals for person2
 puts "#{person2.name}'s rentals:"
 person2.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
+=end
+require_relative 'app'
+
+def main
+    app = App.new
+    app.run
+end
+
+main
