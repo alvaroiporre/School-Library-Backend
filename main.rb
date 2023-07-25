@@ -80,9 +80,10 @@ person1 = Person.new(33, name: 'Bea')
 person2 = Person.new(24, name: 'Rob')
 
 # Creating Rental objects
-Rental.new('2023-07-24', book1, person1)
-Rental.new('2023-07-25', book2, person1)
-Rental.new('2023-07-26', book1, person2)
+person1.add_rental(book1, '2023-07-24')
+person1.add_rental(book2, '2023-07-25')
+person2.add_rental(book1, '2023-07-26')
+
 
 # Accessing rentals for person1
 puts "#{person1.name}'s rentals:"
