@@ -84,7 +84,6 @@ person1.add_rental(book1, '2023-07-24')
 person1.add_rental(book2, '2023-07-25')
 person2.add_rental(book1, '2023-07-26')
 
-
 # Accessing rentals for person1
 puts "#{person1.name}'s rentals:"
 person1.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
