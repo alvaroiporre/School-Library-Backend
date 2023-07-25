@@ -1,12 +1,12 @@
-require_relative 'person'
-require_relative 'student'
-require_relative 'teacher'
-require_relative 'capitalize_decorator'
-require_relative 'trimmer_decorator'
-require './book'
-require './rental'
-require './classroom'
-
+# require_relative 'person'
+# require_relative 'student'
+# require_relative 'teacher'
+# require_relative 'capitalize_decorator'
+# require_relative 'trimmer_decorator'
+# require './book'
+# require './rental'
+# require './classroom'
+#
 # # Test of Person class
 # person = Person.new(25, name: 'John Doe')
 #
@@ -51,43 +51,51 @@ require './classroom'
 # puts capitalized_person.correct_name
 # capitalized_trimmed_person = TrimmerDecorator.new(capitalized_person)
 # puts capitalized_trimmed_person.correct_name
-
+#
 # Creating a Classroom object
-classroom = Classroom.new('Math Class')
-
+# classroom = Classroom.new('Math Class')
+#
 # Creating Student objects
-student1 = Student.new(16, name: 'Alice')
-student2 = Student.new(17, name: 'Bob')
-
+# student1 = Student.new(16, name: 'Alice')
+# student2 = Student.new(17, name: 'Bob')
+#
 # Adding students to the classroom
-classroom.add_student(student1)
-classroom.add_student(student2)
-
+# classroom.add_student(student1)
+# classroom.add_student(student2)
+#
 # Accessing the classroom for each student
-puts "#{student1.name} belongs to #{student1.classroom.label}" # Output: Alice belongs to Math Class
-puts "#{student2.name} belongs to #{student2.classroom.label}" # Output: Bob belongs to Math Class
-
+# puts "#{student1.name} belongs to #{student1.classroom.label}" # Output: Alice belongs to Math Class
+# puts "#{student2.name} belongs to #{student2.classroom.label}" # Output: Bob belongs to Math Class
+#
 # Accessing the students in the classroom
-puts "Students in the #{classroom.label} classroom:"
-classroom.students.each { |student| puts student.name }
-
+# puts "Students in the #{classroom.label} classroom:"
+# classroom.students.each { |student| puts student.name }
+#
 # Creating Book objects
-book1 = Book.new('The Great Gatsby', 'F. Scott Fitzgerald')
-book2 = Book.new('To Kill a Mockingbird', 'Harper Lee')
-
+# book1 = Book.new('The Great Gatsby', 'F. Scott Fitzgerald')
+# book2 = Book.new('To Kill a Mockingbird', 'Harper Lee')
+#
 # Creating Person objects
-person1 = Person.new(33, name: 'Bea')
-person2 = Person.new(24, name: 'Rob')
-
+# person1 = Person.new(33, name: 'Bea')
+# person2 = Person.new(24, name: 'Rob')
+#
 # Creating Rental objects
-person1.add_rental(book1, '2023-07-24')
-person1.add_rental(book2, '2023-07-25')
-person2.add_rental(book1, '2023-07-26')
-
+# person1.add_rental(book1, '2023-07-24')
+# person1.add_rental(book2, '2023-07-25')
+# person2.add_rental(book1, '2023-07-26')
+#
 # Accessing rentals for person1
-puts "#{person1.name}'s rentals:"
-person1.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
-
+# puts "#{person1.name}'s rentals:"
+# person1.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
+#
 # Accessing rentals for person2
-puts "#{person2.name}'s rentals:"
-person2.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
+# puts "#{person2.name}'s rentals:"
+# person2.rentals.each { |rental| puts "#{rental.book.title} (#{rental.date})" }
+require_relative 'app'
+
+def main
+  app = App.new
+  app.run
+end
+
+main
